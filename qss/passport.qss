@@ -1,0 +1,59 @@
+/*
+ * Copyright (C) 2012 Dmytro Mishchenko <arkadiamail@gmail.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+
+/* empty stylesheet */
+
+#pushButton1 {
+        qproperty-htmlText: '<b><font size=5>1&nbsp;&nbsp;&nbsp;&nbsp;</font></b>';
+}
+#pushButton2 {
+        qproperty-htmlText: '<b><font size=5>2</font></b> <font size=2>ABC</font>';
+}
+#pushButton3 {
+        qproperty-htmlText: '<b><font size=5>3</font></b> <font size=2>DEF&nbsp;</font>';
+}
+#pushButton4 {
+        qproperty-htmlText: '<b><font size=5>4</font></b> <font size=2>GHI&nbsp;</font>';
+} 
+#pushButton5 {
+        qproperty-htmlText: '<b><font size=5>5</font></b> <font size=2>JKL</font>';
+}
+#pushButton6 {
+        qproperty-htmlText: '<b><font size=5>6</font></b> <font size=2>MNO&nbsp;</font>';
+}
+#pushButton7 {
+        qproperty-htmlText: '<b><font size=5>7</font></b> <font size=2>PQRS</font>';
+}
+#pushButton8 {
+        qproperty-htmlText: '<b><font size=5>8</font></b> <font size=2>TUV</font>';
+}
+#pushButton9 {
+        qproperty-htmlText: '<b><font size=5>9</font></b> <font size=2>WXYZ</font>';
+}
+#pushButtonStar {
+        qproperty-htmlText: '<b><font size=5>*&nbsp;&nbsp;&nbsp;&nbsp;</font></b>';
+}
+#pushButton0 {
+        qproperty-htmlText: '<b><font size=5>0</font></b>&nbsp;&nbsp;&nbsp;&nbsp;';
+}
+#pushButtonPound {
+        qproperty-htmlText: '<b><font size=5>#&nbsp;&nbsp;&nbsp;&nbsp;</font></b>';
+}
+#pushButtonCallDp {
+        qproperty-htmlText: '<b><font size=5>Call</font></b>';
+}

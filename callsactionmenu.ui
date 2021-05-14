@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CallsActionMenu</class>
+ <widget class="QDialog" name="CallsActionMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>213</width>
+    <height>371</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>9</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="btAm5">
+       <property name="accessibleName">
+        <string>0x35</string>
+       </property>
+       <property name="text">
+        <string>5 jkl</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="btAm2">
+       <property name="accessibleName">
+        <string>0x32</string>
+       </property>
+       <property name="text">
+        <string>2 abc</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="btAm6">
+       <property name="accessibleName">
+        <string>0x36</string>
+       </property>
+       <property name="text">
+        <string>6 mno</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="btAm7">
+       <property name="accessibleName">
+        <string>0x37</string>
+       </property>
+       <property name="text">
+        <string>7 pqrs</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="btAmPound">
+       <property name="accessibleName">
+        <string>0x23</string>
+       </property>
+       <property name="text">
+        <string>#</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="btAm8">
+       <property name="accessibleName">
+        <string>0x38</string>
+       </property>
+       <property name="text">
+        <string>8 tuv</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="btAm3">
+       <property name="accessibleName">
+        <string>0x33</string>
+       </property>
+       <property name="text">
+        <string>3 def</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="3">
+      <widget class="QPushButton" name="btAmHangup">
+       <property name="accessibleName">
+        <string>0x01000000</string>
+       </property>
+       <property name="text">
+        <string>End Call</string>
+       </property>
+       <property name="icon">
+        <iconset resource="taki.qrc">
+         <normaloff>:/icons/hangup.png</normaloff>
+         <disabledoff>:/icons/hangup-disbl.png</disabledoff>
+         <disabledon>:/icons/hangup-disbl.png</disabledon>:/icons/hangup.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="btAm9">
+       <property name="accessibleName">
+        <string>0x39</string>
+       </property>
+       <property name="text">
+        <string>9 wxyz</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="btAm0">
+       <property name="accessibleName">
+        <string>0x30</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="btAm4">
+       <property name="accessibleName">
+        <string>0x34</string>
+       </property>
+       <property name="text">
+        <string>4 ghi</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="btAm1">
+       <property name="accessibleName">
+        <string>0x31</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="btAmStar">
+       <property name="accessibleName">
+        <string>0x2a</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>9</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="lbNoActCalls">
+     <property name="text">
+      <string>No active calls</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="taki.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btAmHangup</sender>
+   <signal>released()</signal>
+   <receiver>CallsActionMenu</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>134</x>
+     <y>344</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>63</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

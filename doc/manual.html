@@ -1,0 +1,717 @@
+<!--
+/*
+ * Copyright (C) 2012 Dmytro Mishchenko <arkadiamail@gmail.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.  
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+-->
+
+<p align="CENTER">
+<strong>SIP Softphone User Guide</strong>
+</p>
+
+<p><a href="#about">About SIP</a></p>
+<p><a href="#sip-acc">SIP account</a></p>
+<p><a href="#cfg-sip">Configuring SIP account</a></p>
+<p><a href="#mult-sip">Multiple SIP accounts</a></p>
+<p><a href="#status-bar">Status bar</a></p>
+<p><a href="#action-menu">Action menu</a></p>
+<p><a href="#making-calls">Making calls</a></p>
+<p><a href="#sim-calls">Multiple simultaneous calls</a></p>
+<p><a href="#active-calls">Active call</a></p>
+<p><a href="#call-ctl">Call controls</a></p>
+<p><a href="#dtmf">DTMF tones during the call</a></p>
+<p><a href="#call-rec">Call recording</a></p>
+<p><a href="#conf-calls">Conference calls</a></p>
+<p><a href="#conf-calls-ctl">Conference call controls</a></p>
+<p><a href="#contacts">Contacts</a></p>
+<p><a href="#history">History</a></p>
+<p><a href="#enable-account">Enabled account</a></p>
+<p><a href="#default-account">Default account</a></p>
+<p><a href="#app-menu">Application menu</a></p>
+<p><a href="#help">Help</a></p>
+<p><a href="#support">Support</a></p>
+<p><a href="#settings">Settings</a></p>
+<p><a href="#voice-codec">Voice codecs</a></p>
+<p><a href="#nat-trav">NAT traversal</a></p>
+<p><a href="#troubleshooting">Troubleshooting</a></p>
+<p><a href="#support">Support</a></p>
+<p><a href="#bb-dev">For Blackberry developers</a></p>
+<p><a href="#sip-providers">SIP providers</a></p>
+
+
+
+<p>
+<a id="about"></a>
+<strong>About SIP</strong>
+</p>
+
+<p>
+Session Initiation Protocol (SIP) is an IETF-defined signaling protocol
+widely used by voice over IP providers.  Nowadays it becomes an industry
+standard for audio and video communications.  This softphone implements SIP
+as specified by RFC 3261 and compatible with all VoIP providers that follows
+this standard.
+</p>
+
+<p>
+<a id="sip-acc"></a>
+<strong>SIP account</strong>
+</p>
+
+<p>
+To start using SIP phone you should signup for a SIP account with one of
+the VoIP providers. Softphone can also be used as an extension of IP PBX
+which supports SIP. List of recommended VoIP providers can be found at the
+end of this guide.
+</p>
+
+<p>
+<a id="cfg-sip"></a>
+<strong>Configuring SIP account</strong>
+</p>
+
+<p>
+To start using softphone, in most cases, it'll be enough to fill fields
+on <em>"Accounts"</em> tab.
+</p>
+
+<p>
+<em>"Your name"</em> - you can specify your real name or phone number
+that was assigned to you by a SIP provider.  In some cases this string may
+be presented to a called party.
+</p>
+
+<p>
+<em>"User name"</em> - usually assigned by your SIP provider and used for
+authentication.  It can be your PBX extension number, string or DID (phone
+number).
+</p>
+
+<p>
+<em>"Password"</em> - assigned by the SIP provider and used for
+authentication.
+</p>
+
+<p>
+<em>"Domain"</em> - domain name or IP address of your SIP provider. If
+required your can specify port number after column, i.e.
+myprovider.com:5066.
+</p>
+
+<p>
+<em>"Register"</em> - most SIP providers require registration to be turned
+on. It'll allow SIP provider to route incoming calls to your softphone.
+</p>
+
+
+<p>
+<a id="mult-sip"></a>
+<strong>Multiple SIP accounts</strong>
+</p>
+
+<p>
+This softphone supports multiple SIP accounts. To add another account on
+<em>"Accounts"</em> tab you can use drop down list with accounts and choose
+<em>"Add new account"</em>. Account that should be used for a call can be
+selected on <em>"Dialer"</em> tab.  Selected account will be used for calls
+initiated from <em>"Dialer"</em>, <em>"Contacts"</em>, and
+<em>"History"</em> tabs.
+</p>
+
+<p>
+If softphone is configured with multiple accounts, one of them can be made
+"default" at <em>"Accounts"</em>-&gt;<em>"Edit"</em> page.
+Default account will be selected in drop down list on phone start.
+</p>
+
+<p>
+<a id="status-bar"></a>
+<strong>Status bar</strong>
+</p>
+
+<p>
+Upper line of the softphone is a status bar were the program displays
+various status information. It shows account registration status, 
+current call status, call completion errors and other information.
+</p>
+
+
+<p>
+<a id="action-menu"></a>
+<strong>Action menu</strong>
+</p>
+
+<p> 
+Button with three vertical dots is an action menu.  It is available for
+all tabs and provides context specific actions.  For active <em>"Calls"</em>
+it provides possibility to dial DTMF tones.  For <em>"Dialer"</em> tab it
+provides possibility to create new Contact, with the phone number specified in
+dialer input line.  For<em>"Contacts"</em> tab it provides possibility to
+call, send message, add, edit, and remove the contact.  
+For <em>"History"</em> tab it allows to set history related setting and delete
+history records.
+For <em>"Account"</em> tab it allows to create new Account, edit account
+settings, and delete account.
+</p>
+
+<p>
+<a id="making-calls"></a>
+<strong>Making calls</strong>
+</p>
+
+<p>
+After you configure at least one SIP account you'll be able to make calls.
+On <em>"Dialer"</em> tab you can specify the number to dial and press
+<em>"Call"</em> to initiate a call.  Number can be entered in dial input or
+dialed with key buttons followed by <em>"Call"</em>.
+</p>
+
+<p>
+Also call can be initiated from the <em>"Contacts"</em> tab. First choose
+one of your contacts and then choose contact phone number you want to call.
+</p>
+
+<p>
+Another possibility to initiate call provided at <em>"History"</em> tab.
+Choosing the phone number or name will start a new call. Choosing timestamp or
+icon to the right will open call details.
+</p>
+
+<p> Number can be re-dialed pressing <em>"Call"</em> button at
+<em>"Dialer"</em> tab two times.  After pressing it once, number will be put
+in a dial input, giving possibility to adjust the number.  Pressing
+<em>"Call"</em> for the second time will initiate a call.
+
+<p>When the phone numbers stored in an Address book in a format other then
+required by VoIP provider, required number translation rules can be set for
+Account at <em>"Account" tab->"Edit"->"Dialing"</em>. 
+E.g. leading "+" can be stripped, or "00" prefix can be added, or
+strip "+" and prepend 011.
+</p>
+
+<p>
+<a id="sim-calls"></a>
+<strong>Multiple simultaneous calls</strong>
+</p>
+
+<p>
+Softphone provides possibility to make multiple simultaneous calls. You can
+originate calls or answer inbound calls.
+</p>
+<p>
+To originate another call, you can switch to <em>"Dialer"</em> tab and dial
+the number from there.  Alternatively, call can be originated from<em>
+"Contacts"</em> or <em>"History"</em> tabs.
+</p>
+<p>
+Some SIP provider may limit you account to one or two simultaneous calls.
+Please consult with them for this feature support.
+</p>
+
+<p>
+<a id="active-calls"></a>
+<strong>Active call</strong>
+</p>
+
+<p>
+When you originate or receive a call, it appears at <em>"Calls"</em> tab.
+When you have multiple calls, active call will be outlined with a blue
+frame.  This call is connected to your microphone and speaker.  When one
+call becomes active, the other calls are automatically put on hold.  To switch
+to another call and make it active you can tap the call anywhere in call
+area.
+</p>
+
+<p>
+<a id="call-ctl"></a>
+<strong>Call controls</strong>
+</p>
+
+<p>
+The following actions available for active call:
+</p>
+
+<p>
+<em>"Record"</em> - enable/disable call recording.
+</p>
+
+<p>
+<em>"Mute"</em>- mute your microphone. When the call is muted, other party
+wont hear you and you may still hear what they say.
+When the call is muted pressing this button again will un-mute your
+microphone. Other party will hear you again.
+</p>
+
+<p>
+<em>"Dialpad" </em>- open keypad which can be used to send DTMFs. It is
+often required to navigate companies IVR or Voicemail.
+</p>
+
+<p>
+<em>"Speaker"</em> - enable/disable speakerphone (supported on phone devices
+only).
+</p>
+
+<p>
+<em>"Transfer"</em> - transfer a call. Implements call transfer services
+using REFER SIP method. Two types of transfers supported: "Blind" and
+"Normal" (Attended). Please check your PBX documentation or consult with
+your provider to find if call transfer is supported.
+
+To transfer active call, press "Transfer" button. It'll open action menu
+with keypad and prompt you to enter phone number. Using keypad, enter target
+phone number and choose required transfer method: "Blind" or "Normal". 
+
+On "Blind" transfer, call will be immediately transferred to entered number.
+On "Normal" transfer, second call to target number will be established and
+original call will be put on hold. To complete the transfer press "Transfer"
+button on the second call.  
+To cancel the transfer press "End Call" on the second call.
+
+In case of transfer error or if transfer is "Canceled" phone will return to
+original call.
+</p>
+
+<p>
+<em>"Hold"</em> - put call on hold. This feature should be supported by your
+SIP provider or IP PBX.  When call is on hold, the other side will usually
+hear the music on hold.  Please consult with your SIP provider before using
+this feature.
+
+When the call is on "Hold", pressing this button again will resume the call.
+</p>
+
+<p>
+<em>"End Call"</em> - ends the call.
+</p>
+
+<p><em>"Account"</em> settings at <em>"Account" tab->"Edit"->"Calls"</em>
+allows to set to auto-answer all incoming calls. This option is set per
+account and can be used in call center environment when the calls are
+controlled through some third party desktop or web based application.
+</p>
+
+<p>
+<a id="dtmf"></a>
+<strong>DTMF tones during the call</strong>
+</p>
+
+<p>
+DTMF tones are often used for auto attendant menu navigation or for sending
+special call control sequences.  DTMF tones can be send to an active call
+from a <em>"Calls"</em> tab action menu.
+</p>
+
+<p>
+<a id="call-rec"></a>
+<strong>Call recording</strong>
+</p>
+
+<p>
+You can start call recording pressing <em>"Record"</em> button on the
+established call.  To stop call recording, press <em>"Record"</em> button
+again.
+</p>
+
+<p>
+Recorded calls are marked with an icon showing "magnetic tape" in a
+<em>"History"</em> tab.  You can play them using the action menu and control
+the playback with <em>"Play"</em> and <em>"Stop"</em> buttons.
+</p>
+
+<p>
+When you delete a call from <em>"History"</em>, recording is deleted as
+well.
+</p>
+
+<p>
+On Blackberry platform recordings are stored in "shared/voice/callrecording"
+folder.  They are saved in a WAV format and can be accessed by other
+applications.
+</p>
+
+<p> <em>"Account"</em> settings at <em>"Account" tab->"Edit"->"Calls"</em>
+allows to set to auto-record all calls.
+</p>
+
+<p>
+<a id="conf-calls"></a>
+<strong>Conference calls</strong>
+</p>
+
+<p>
+If you have more then two established calls you can combine them into a
+conference.
+</p>
+
+<p>
+Tap one of the calls and start dragging it to another call. Release it when
+it'll be over required call.  It'll combine these two calls into the
+conference and you'll be the third participant.  Other calls can be dragged
+to the conference in a similar way.
+</p>
+
+<p>
+During the conference call your device will be mixing audio of all
+participants.  So take into consideration your device performance and
+available network bandwidth.
+</p>
+
+<p>
+<a id="conf-calls-ctl"></a>
+<strong>Conference call controls</strong>
+</p>
+
+<p>
+While in conference, the following conference controls are available:
+</p>
+
+<p>
+<em>"Record"</em> - record the conference call. Recordings will be attached
+to each call participating in the conference.
+</p>
+
+<p>
+<em>"Speaker"</em> - play Conference call through the speaker.
+</p>
+
+<p>
+<em>"Split"</em> - split the conference to individual calls. 
+After pressing this button all calls will be removed from the conference 
+and your device will still hold all these calls. You'll be able to switch 
+between them or combine them in the conference again.
+</p>
+
+<p>
+<em>"Mute"</em> - mute your microphone from the conference. All participants
+can still talk to each other.  Pressing this button again will un-mute your
+microphone and you'll be heard in the conference.
+</p>
+
+<p>
+<em>"End Calls"</em> - hangup all calls in the conference.
+</p>
+
+<p>
+When the call is in the conference the following call controls are
+available:
+<p>
+
+<p>
+<em>"Mute"</em> - mute a call from the conference. Audio from this
+participant wont be heard in the conference, but he'll be able to hear the
+conference conversation.  Using this button you'll be able to provide
+"listen only" experience for participants.
+</p>
+
+<p>
+<em>"Kick"</em> - removes a call from the conference. This call remains
+established and you'll be able to switch to this call with a tap in a call
+area.
+</p>
+
+<p>
+<em>"End Call"</em> - hangup a call. Call will be removed from the conference
+and hangup.
+</p>
+
+<p>
+<a id="contacts"></a>
+<strong>Contacts</strong>
+</p>
+
+<p>
+Basic operation on Contacts are available via action menu.
+</p>
+
+<p>
+On Playbook platform version 2.x, softphone keeps its own database of
+contacts in application data directory.
+</p>
+
+<p>
+On BB10 platform softphone integrates with the device contacts. It allows to
+access contacts created by another applications.
+</p>
+
+<p>
+<a id="history"></a>
+<strong>History</strong>
+</p>
+
+<p>
+This screen displays made and received calls. It allows you to browse calls,
+find more information about calls, access call recordings, and call back.
+</p>
+
+<p>
+Icons with arrow pointing UP represents outbound calls. Icons with arrow
+pointing DOWN represent inbound calls.
+</p>
+
+<p>
+Icons with red "x" represent unanswered calls or calls with errors. Icons
+with "magnetic tape" represents calls with recording.
+</p>
+
+<p>
+Clicking on the phone number area will initiate a call.
+Click on the time stamp will open call details with various call information
+and access to call recording.
+</p>
+
+<p> Various actions available via the action menu.  It allows you to specify
+number of calls in history and clear all history records.  When you remove a
+call from <em>"History"</em>, recording is removed as well.  </p>
+
+
+<p>
+<strong>Edit Account (Advanced account settings)</strong>
+</p>
+
+<p>
+This screen allows to fine tune account settings. When "Account" tab is
+selected it is available from the action menu.  It allows to configure:
+</p>
+
+<p>
+- authentication credentials which may be different from the username.
+</p>
+<p>
+- SIP registrar
+</p>
+<p>
+- outbound SIP proxy
+</p>
+<p>
+- NAT traversal
+</p>
+<p>
+- Ringtones
+</p>
+<p>
+- Dialing rules
+</p>
+
+
+<p>
+<a id="enable-account"></a>
+<strong>Enabled account</strong>
+</p>
+
+<p>
+Using <em>"Account"-&gt;"Edit"</em> screen, account can be
+<em>"Enabled"</em> or <em>"Disabled"</em>.  Enabled accounts are active and
+can be used for dialing and for inbound calls.  Disabled accounts are not
+active and only available at <em>"Accounts"</em> screen for further
+configuration.
+</p>
+
+<p>
+<a id="default-account"></a>
+<strong>Default account</strong>
+</p>
+
+<p>
+Using <em>"Account"-&gt;"Edit"</em> screen, account can be made
+<em>"Default"</em> account.  This will make account selected in drop down
+list at <em>"Dialer"</em> tab on softphone start.  Only one account should
+be set as default.
+</p>
+
+<p>
+<a id="app-menu"></a>
+<strong>Application menu</strong>
+</p>
+
+<p>
+Help, Support and General softphone settings are available from the application menu.
+To access this menu, swipe down from the top frame onto the screen.
+</p>
+
+<p>
+<a id="help"></a>
+<strong>Help</strong>
+</p>
+
+<p>
+This user guide. Also available at <a href="http://taki.sourceforge.net/">http://taki.sourceforge.net/</a>
+</p>
+
+<p>
+<a id="support"></a>
+<strong>Support</strong>
+</p>
+
+<p>
+On this screen you can find web links to the softphone support resources.
+This screen can also be used to troubleshoot the softphone behavior,
+connection problems and provide technical information about softphone
+operations.  In addition to high level logging it is possible to enable
+logging of SIP messages clicking on <em>"SIP messages"</em> check box.
+Information from this screen can be extracted using <em>"Copy"</em> button
+and pasted to another application.
+</p>
+
+<p>
+<a id="settings"></a>
+<strong>Settings</strong>
+</p>
+
+<p>
+This screen provides access to granular configuration of the softphone. It
+gives you possibility to control port to which softphone binds, specify
+transports: TCP, UDP.  It also allows you to configure used media codecs,
+and codecs priorities, and aspects of NAT traversal using STUN.
+</p>
+
+<p>
+In most cases these settings should be left in their defaults.
+</p>
+
+<p>
+<a id="voice-codec"></a>
+<strong>Voice codecs</strong>
+</p>
+
+<p>
+Most VoIP providers support G711u and G711a audio codecs. These two codecs
+are the safest choice when you are configuring a new SIP account.  If you
+are making calls over mobile connection Speex-nb codec is a good alternative
+with a good quality and low bandwidth requirements.  iLBC codec can be used
+on a low quality connections with a high percentage of dropped packets.  You
+may want to consult your SIP provider about supported audio codecs.
+</p>
+
+<p>
+<a id="nat-trav"></a>
+<strong>NAT traversal</strong>
+</p>
+
+<p>
+In most cases default settings will be enough to allow softphone to work
+behind the NAT.
+</p>
+
+<p>
+More granular control for NAT traversal is available at
+<em>"Account"-&gt;"Edit"-&gt;"Transport/NAT"</em> and
+<em>"Settings"-&gt;"STUN"</em> screens.
+</p>
+
+<p>
+<a id="troubleshooting"></a>
+<strong>Troubleshooting</strong>
+</p>
+
+<p>
+Application menu <em>"Support"</em> screen can be used to find more technical
+details about phone operations.
+</p>
+
+<p>
+<a id="support"></a>
+<strong>Support</strong>
+</p>
+
+<p>
+Softphone web site: <a
+href="http://taki.sourceforge.net/">http://taki.sourceforge.net/</a>
+provides information on application updates, configuration tips, this
+documentation and other helpful resources.  You can also mail your question
+to arkadiam AT users.sourceforge.net.
+</p>
+
+<p>
+<a id="bb-dev"></a>
+<strong>For Blackberry developers. Invoking Softphone from other
+applications</strong>
+</p>
+
+<p>
+On the Blackberry 10 platform Softphone can be invoked from the other
+applications via invocation framework.  Softphone target description listed
+bellow:
+</p>
+
+<pre>
+<span class="inner-pre" style="font-size: 4pt">
+&lt;invoke-target id="com.utils.taki.uri.call"&gt;
+&lt;invoke-target-type&gt;application&lt;/invoke-target-type&gt;
+&lt;invoke-target-name&gt;Taki SIP phone&lt;/invoke-target-name&gt;
+&lt;icon&gt;&lt;image&gt;res/icon.png&lt;/image&gt;&lt;/icon&gt;
+&lt;filter&gt;
+&lt;action&gt;bb.action.OPEN&lt;/action&gt;
+&lt;mime-type&gt;application/vnd.taki.phone.startcall&lt;/mime-type&gt;
+&lt;property var="uris" value="sip:,tel:"/&gt;
+&lt;/filter&gt;
+&lt;/invoke-target&gt;
+</span>
+</pre>
+
+<p>
+<a id="sip-providers"></a>
+<strong>SIP providers list</strong>
+</p>
+
+<p>
+<strong><em>Commercial:</em></strong>
+</p>
+
+<p>
+- <a
+href="https://www.diamondcard.us/exec/sgninit?spo=taki">Diamondcard.us</a>
+Provides VoIP service since 2004.  Allows to make long distance calls on
+competitive rates, voice mail and conference service.  Phone numbers from
+more then 60 countries, call back and SMS services.  With every signup or
+recharge you contribute to open source projects.
+</p>
+
+<p>
+<strong><em>Free:</em></strong>
+</p>
+
+<p>
+- SIP2SIP <a href="http://sip2sip.info/"
+target="_blank">http://sip2sip.info</a> SIP2SIP provides
+free server support for SIP signaling, RTP media (Audio and Video), NAT
+Traversal (including ICE), MSRP media (IM and File Transfers), Presence and
+XCAP (SIMPLE) and Multiparty Conferencing with wide band Audio, IM, File
+Transfers and Screen Sharing.  This service runs on SIP Thor platform.  The
+SIP accounts is reachable from any open network and you establish session to
+SIP and XMPP addresses or phone numbers.  You can use multiple devices
+located on the public Internet or behind NAT routers.
+</p>
+
+<p>
+- IPTEL <a
+ href="http://www.iptel.org/service">http://www.iptel.org/service</a>
+
+Many people use IPTEL services for software/hardware interoperability
+testing or just as a way to call other people.  The service allows incoming
+and outgoing calls from/to any other IP Telephony services (note: some
+commercial services stop calls to other Internet-based services).
+</p>
+
+<p>
+- <a href="https://www.ekiga.net/index.php?page=services">Ekiga.net</a>
+Provides free SIP address, possibility to call other Ekiga users for free,
+public and private conference rooms.
+</p>
+
+<p align="CENTER">
+Copyright &copy; 2012-2014.  Dmytro Mishchenko
+</p>

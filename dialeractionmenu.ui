@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialerActionMenu</class>
+ <widget class="QDialog" name="DialerActionMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>200</width>
+    <height>217</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>52</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="btAddContact">
+       <property name="text">
+        <string>Add contact</string>
+       </property>
+       <property name="icon">
+        <iconset resource="taki.qrc">
+         <normaloff>:/icons/add-contact.png</normaloff>
+         <disabledoff>:/icons/add-contact-disbl.png</disabledoff>
+         <disabledon>:/icons/add-contact-disbl.png</disabledon>:/icons/add-contact.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>81</width>
+         <height>81</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>51</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="taki.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btAddContact</sender>
+   <signal>released()</signal>
+   <receiver>DialerActionMenu</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>164</x>
+     <y>25</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

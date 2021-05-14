@@ -1,0 +1,96 @@
+/*
+ * Copyright (C) 2012 Dmytro Mishchenko <arkadiamail@gmail.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+
+QWidget {
+  font: 23pt;
+  font-family: "SlatePro";
+  /*font-size: 16pt;*/
+}
+
+QCheckBox::indicator { 
+  width: 45px; 
+  height: 45px; 
+}
+
+QPushButton {
+  font: 28pt;
+  min-width: 100px;
+  min-height: 70px;
+
+     border: 5px solid #c0c0c0;
+     border-radius: 8px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+
+}
+ 
+QPushButton:pressed {
+     border: 5px solid #3e3e3e;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #2593b8, stop: 1 #0689b4);
+     color: #fafafa;
+}
+
+/*
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+*/
+
+#pushButton1 {
+        qproperty-htmlText: '<b><font size=7>1&nbsp;&nbsp;&nbsp;&nbsp;</font></b>';
+}
+#pushButton2 {
+        qproperty-htmlText: '<b><font size=7>2</font></b> <font size=4>ABC</font>';
+}
+#pushButton3 {
+        qproperty-htmlText: '<b><font size=7>3</font></b> <font size=4>DEF&nbsp;</font>';
+}
+#pushButton4 {
+        qproperty-htmlText: '<b><font size=7>4</font></b> <font size=4>GHI&nbsp;</font>';
+} 
+#pushButton5 {
+        qproperty-htmlText: '<b><font size=7>5</font></b> <font size=4>JKL</font>';
+}
+#pushButton6 {
+        qproperty-htmlText: '<b><font size=7>6</font></b> <font size=4>MNO&nbsp;</font>';
+}
+#pushButton7 {
+        qproperty-htmlText: '<b><font size=7>7</font></b> <font size=4>PQRS</font>';
+}
+#pushButton8 {
+        qproperty-htmlText: '<b><font size=7>8</font></b> <font size=4>TUV</font>';
+}
+#pushButton9 {
+        qproperty-htmlText: '<b><font size=7>9</font></b> <font size=4>WXYZ</font>';
+}
+#pushButtonStar {
+        qproperty-htmlText: '<b><font size=7>*&nbsp;&nbsp;&nbsp;&nbsp;</font></b>';
+}
+#pushButton0 {
+        qproperty-htmlText: '<b><font size=7>0</font></b>&nbsp;&nbsp;&nbsp;&nbsp;';
+}
+#pushButtonPound {
+        qproperty-htmlText: '<b><font size=7>#&nbsp;&nbsp;&nbsp;&nbsp;</font></b>';
+}
+#pushButtonCallDp {
+        qproperty-htmlText: '<b><font size=7>Call</font></b>';
+}
+
+#leNumberToDial {
+  font-size: 36pt;
+}
